@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagels - DeepNets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header fixed-top">
+        <h1 class="head_title text-center fw-bolder text-secondary-emphasis">Mastermind: Can You Crack the Code?</h1>
+    </div>
+
+    <div class="desc">
+        <div class="rules">
+            <p>In the intriguing world of 'Bagels,' a deductive logic game, you embark on a captivating mission to
+                unravel the enigma of a secret n-digit number. Armed with your wits and deduction skills, you'll receive
+                invaluable hints from the game in response to your every guess, which will set you on the path to
+                solving the mystery.
+            </p>
+
+            <ol class="rulelist list-group list-group-numbered">
+                <li class="list-group-item"><strong>Pico</strong>: This clue is your guiding light when your guess
+                    contains a correct digit, but it's not in the
+                    right place. It's a subtle nudge in the right direction.
+                </li>
+
+                <li class="list-group-item"><strong>Fermi</strong>: The "Fermi" clue signifies an even greater
+                    achievement –
+                    it tells you that your guess contains a correct digit in precisely the right position. You're
+                    getting
+                    warmer, and you're on the right track.
+                </li>
+
+                <li class="list-group-item"><strong>Bagels</strong>: On the other hand, if the game offers the "Bagels"
+                    clue, it means your guess doesn't include any
+                    correct digits. You'll need to revise your strategy and rethink your approach.
+                </li>
+            </ol>
+
+            <p>With these valuable clues at your disposal, you're ready to embark on your mission to unlock the secret
+                number. However, time is of the essence, as you have a limited set of attempts. In 'Bagels,' you're
+                granted
+                a total of N tries to crack the elusive code and emerge victorious.</p>
+
+            <p>But that's not all; 'Bagels' takes your experience further by offering a diverse array of difficulty
+                levels
+                to suit players of all skill levels. Choose your desired challenge and set the stage for your adventure:
+            </p>
+
+            <ul class="difficultylevels list-group list-group-numbered">
+                <li class="list-group-item"><strong>Kid</strong>
+                    <p>This mode is the perfect starting point, designed for beginners and novices. Here, you'll
+                        decipher a
+                        two-digit number, providing a gentle introduction to the world of 'Bagels.' Try to guess a
+                        number of
+                        <strong>2</strong> digit.
+                    </p>
+                </li>
+                <li class="list-group-item"><strong>Easy</strong>
+                    <p>For those seeking a balanced challenge, the "Easy" difficulty level presents you with the task of
+                        guessing a three-digit number. It's a great option to sharpen your skills. Try to guess a number
+                        of
+                        <strong>3</strong> digit.
+                    </p>
+                </li>
+                <li class="list-group-item"><strong>Normal</strong>
+                    <p>Elevate the complexity with the "Normal" difficulty level, where you'll grapple with a four-digit
+                        number. It offers a moderate level of challenge, striking a balance between fun and
+                        brain-teasing.
+                        Try to guess a number of <strong>4</strong> digit.
+                    </p>
+                </li>
+                <li class="list-group-item"><strong>Hard</strong>
+                    <p>The "Hard" mode takes the challenge to the next level. Here, you'll tackle a six-digit number,
+                        testing
+                        your deductive skills to their limits. It's the ideal choice for those who love a good puzzle.
+                        Try to
+                        guess a number of <strong>6</strong> digit.
+                    </p>
+                </li>
+                <li class="list-group-item"><strong>Impossible</strong>
+                    <p>Only for the bravest and most daring players, the "Impossible" difficulty level sets an audacious
+                        task
+                        before you. Can you guess a ten-digit number? It's the ultimate test, pushing the boundaries of
+                        your
+                        logical prowess and providing an adrenaline-pumping experience. Try to guess a number of
+                        <strong>10</strong>
+                        digit.
+                    </p>
+                </li>
+            </ul>
+
+            <p>In 'Bagels,' there's a challenge for everyone, from the novice code-breaker to the seasoned puzzle
+                enthusiast.
+                No matter your skill level, you're in for an engaging and stimulating experience.
+
+                So, put on your thinking cap and get ready for an exciting adventure in 'Bagels.' Uncover the secret
+                numbers,
+                crack the code, and immerse yourself in the world of deduction and mystery. Your quest begins now – good
+                luck!"</p>
+        </div>
+
+        <div class="arena shadow-lg p-10 mb-lg-5 bg-body-tertiary">
+            <div class="diffSelect">
+                <h3 style="display: inline-block;">Select difficulty :</h3>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="kid" value="kid">
+                    <label class="form-check-label" for="kid">
+                        <strong class="text-success">Kid</strong>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="easy" value="easy" checked>
+                    <label class="form-check-label" for="easy">
+                        <strong class="text-primary">Easy</strong>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Normal" value="normal">
+                    <label class="form-check-label" for="Normal">
+                        <strong class="text-warning">Normal</strong>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="hard" value="hard">
+                    <label class="form-check-label" for="hard">
+                        <strong class="text-danger-emphasis">Hard</strong>
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="impossible"
+                        value="impossible">
+                    <label class="form-check-label" for="impossible">
+                        <strong class="text-danger">Impossible</strong>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3" id="inputArea">
+                <input type="number" class="form-control" placeholder="N digit Number" aria-label="N digit Number"
+                    aria-describedby="submitBtn" id="numberInput">
+                <button class="btn btn-outline-success" type="button" id="submitBtn">Guess</button>
+            </div>
+
+            <div class="gameinfo">
+                <br>
+                <p class="text-center">Guess the <strong><span class="len">3</span></strong> digit number.</p>
+                <p class="tries text-center">Tries Left: <strong><span class="ntry">10</span></strong> Prev Input:
+                    <strong><span class="prevIn"></span></strong></p>
+                <br>
+            </div>
+
+            <div class="btnsCnt shadow-lg p-10 mb-lg-5 bg-body-tertiary">
+                <h3 class="btnText text-bg-light text-center">You Guess seems to be!</h3>
+                <div class="buttonContainer" id="buttonContainer">
+                    <button class="btn btn-dark">Play</button>
+                    <button class="btn btn-dark">Play</button>
+                    <button class="btn btn-dark">Play</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bagles.js"></script>
+</body>
+
+</html>
