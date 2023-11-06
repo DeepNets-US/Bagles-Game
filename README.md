@@ -38,7 +38,7 @@ Baggles is more than just a game; it's a grand adventure filled with riddles, se
 
 🚀 Ready to start your code-breaking journey? Just click below and let the adventure begin!
 
-![Play Baggles Now](https://bagles-game.vercel.app/)
+[Play Baggles Now](https://bagles-game.vercel.app/)
 
 Have a blast, and may the code be ever in your favor!
 
