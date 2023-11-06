@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const numberLen = document.querySelector(".len");
     const prevIn = document.querySelector(".prevIn");
     const buttonContainer = document.querySelector(".buttonContainer");
+    const winAudio = document.getElementById("winAudio");
+    const lostAudio = document.getElementById("lostAudio");
+    const enterAudio = document.getElementById("enterAudio");
+    const click = document.getElementById("click");
 
     const difficultySettings = {
         kid: { N: 2, n_tries: 20 },
@@ -31,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         radio.addEventListener("change", function () {
             if (this.checked) {
                 const difficulty = this.value;
+                click.play();
                 N = difficultySettings[difficulty].N;
                 n_tries = difficultySettings[difficulty].n_tries;
                 randNum = generateRandomNumber(N).toString();
@@ -52,8 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="btn btn-dark">Play</button>
             `;
         } else if (result === "win") {
+
+            winAudio.play();
+
             buttonContainer.innerHTML = `<h3 class="winText text-success text-center">CORRECT!</h3>`;
+
+
         } else if (result === "lost") {
+
+            lostAudio.play();
+
             buttonContainer.innerHTML = `
             <h3 class="winText text-danger text-center">You LOST!</h3>`;
 
@@ -86,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function handleGuess() {
+        enterAudio.play();
+
         const userInput = numberInput.value;
         prevIn.textContent = userInput;
 

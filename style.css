@@ -99,3 +99,11 @@
     font-size: 40px;
     animation: firework 1.5s ease-in-out;
 }
+
+.hidden {
+    display: none;
+    /* or */
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
