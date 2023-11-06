@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (tries === n_tries) {
             updateResult("lost");
             submitBtn.disabled = true;
+            resetGame();
         }
 
         updateTriesLeft();
