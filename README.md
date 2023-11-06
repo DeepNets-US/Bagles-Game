@@ -1,65 +1,45 @@
-# Bagles - DeepNets
+# Baggles - The Code-Cracking Adventure
 
-![image](https://github.com/DeepNets-US/Bagles/assets/118154709/586cc91b-f06b-49fe-adf2-c923d3c5bd3e)
+![image](https://github.com/DeepNets-US/Bagles-Game/assets/118154709/686466bf-cc6a-40f2-aba4-521c19bb388d)
 
-Bagles is a deductive logic game that challenges players to decipher a hidden n-digit number. It provides real-time feedback and hints to guide players toward solving the mystery number. This README provides a comprehensive guide to the game, its features, installation, and gameplay.
+🎉 Welcome to Baggles, the ultimate code-cracking adventure that'll tickle your brain and provide hours of detective fun! 🕵️‍♂️ This README is your passport to the world of Baggles. Let's embark on this thrilling journey!
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [How to Play](#how-to-play)
-- [Game Rules](#game-rules)
-- [Customization](#customization)
+## Game Overview
 
-## Introduction
-Bagles, part of the DeepNets gaming series, offers an engaging and stimulating experience for players of all skill levels. In this deductive logic game, players embark on a mission to decipher a secret n-digit number. Armed with wit and deduction skills, they receive invaluable hints from the game, which set them on the path to solving the mystery.
+Baggles is not your ordinary game; it's a blend of logic, mystery, and loads of excitement. This web-based masterpiece draws inspiration from the classic book [insert book name here] to bring the joy of code-breaking to your fingertips.
 
-## Features
-- **Multiple Difficulty Levels**: Bagles offers a range of difficulty levels, making it accessible to beginners and challenging for experienced players.
-- **Real-Time Feedback**: Receive immediate feedback on your guesses, helping you refine your strategy.
-- **Customizable Settings**: Tailor the game to your preferences, from difficulty level to color schemes.
-- **Web-Based Gameplay**: Play the game directly in your web browser, no downloads required.
-- **Fun and Educational**: Bagles is a fun way to sharpen your deductive skills while having an enjoyable gaming experience.
+📚 Grab your magnifying glass (virtually, of course), and let's dive into the captivating world of Baggles!
 
-## Installation
-Getting Bagles up and running on your local machine is a straightforward process:
+## User Interface
 
-1. **Clone the Repository**: Begin by cloning the Bagles repository to your local machine:
+![image](https://github.com/DeepNets-US/Bagles-Game/assets/118154709/6cf84092-9f58-4587-8e18-6cef05e6ee4d)
 
-   ```
-   git clone https://github.com/yourusername/bagles.git
-   ```
+### The Baggles Arena 🕵️‍♀️
 
-3. **Run the Web Version**: For the web-based gameplay, navigate to the "web" folder and open the "index.html" file in your web browser.
+The game arena is where all the magic happens, and it's designed to be user-friendly and loads of fun! Here's what you'll find:
 
-4. **Run the Python Version**: For the Python version, navigate to the "python" folder and run the "bagles.py" file using the command:
+- **Choose Your Challenge**: Start by selecting your preferred difficulty level; each one offers a unique puzzle to solve.
+- **Guess the Secret Code**: Enter your guess in the input area, and either hit "Guess" or press "Enter."
+- **Get Clues**: The game provides you with clues like "Pico," "Fermi," and "Bagels" to guide you to the secret number.
+- **Victory or Defeat**: The game keeps you informed about your progress and lets you know if you've cracked the code or if it's time for another attempt.
 
-   ```
-   python run.py
-   ```
+Get ready for an epic code-cracking showdown!
 
-## Usage
-Bagles is designed for ease of play. Choose your preferred difficulty level, enter your guess, and receive feedback from the game. The objective is to crack the elusive code within the given number of attempts.
+## How to Play 🕵️‍♂️
 
-## How to Play
-1. **Select a Difficulty Level**: Choose a difficulty level that suits your skill level - Kid, Easy, Normal, Hard, or Impossible.
-2. **Make a Guess**: Enter your guess in the provided input field.
-3. **Submit Your Guess**: Click the "Guess" button or simply press Enter to submit your guess.
-4. **Receive Feedback**: After each guess, the game provides feedback in the form of Pico, Fermi, or Bagels.
-5. **Keep Guessing**: Continue guessing until you win by correctly guessing the secret number or run out of attempts.
+1. Pick your preferred difficulty level by clicking the radio button that suits your mood.
+2. Type your guess in the input area and press "Guess" or tap "Enter" on your keyboard.
+3. The game responds with exciting clues to your guess.
+4. Keep guessing until you either unlock the secret code or exhaust your chances.
 
-## Game Rules
-Bagles is built around three key clues:
-- **Pico**: This clue signifies that your guess contains a correct digit, but it's not in the right place. It provides a subtle nudge in the right direction.
-- **Fermi**: The "Fermi" clue indicates that your guess contains a correct digit in precisely the right position, bringing you closer to the solution.
-- **Bagels**: When the game offers the "Bagels" clue, it means your guess doesn't include any correct digits. You'll need to revise your strategy and rethink your approach.
+## Dive into the Adventure 🎮
 
-## Customization
-Bagles is customizable to enhance your gaming experience. You can tailor the game to your liking by adjusting various parameters such as:
-- Game Rules
-- Color Schemes
-- Difficulty Levels
+Baggles is more than just a game; it's a grand adventure filled with riddles, secrets, and the thrill of discovery! Step into the shoes of a mastermind detective, and let's crack those codes!
 
----
+🚀 Ready to start your code-breaking journey? Just click below and let the adventure begin!
+
+![Play Baggles Now](https://bagles-game.vercel.app/)
+
+Have a blast, and may the code be ever in your favor!
+
+Happy gaming! 🕵️‍♀️🎲
