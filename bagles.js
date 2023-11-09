@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (checkAudioPlay === "none") {
                     button.textContent = state;
                 } else {
-                    console.log(state);
                     button.textContent = stateMapping[state];
                 }
 
@@ -164,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const result = checkGuess(userInput, randNum, N);
-        console.log(result);
 
         updateResult(result);
 
