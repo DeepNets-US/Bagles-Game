@@ -105,6 +105,8 @@
                 luck!"</p>
         </div>
 
+        <!-- Game Section -->
+        
         <div class="arena shadow-lg p-10 mb-lg-5 bg-body-tertiary">
             <div class="diffSelect">
                 <h3 style="display: inline-block;">Select difficulty :</h3>
@@ -146,11 +148,15 @@
                 </div>
             </div>
 
+            <!-- User Input -->
+
             <div class="input-group mb-3" id="inputArea">
                 <input type="number" class="form-control" placeholder="N digit Number" aria-label="N digit Number"
                     aria-describedby="submitBtn" id="numberInput">
                 <button class="btn btn-outline-success" type="button" id="submitBtn">Guess</button>
             </div>
+
+            <!-- Game Information -->
 
             <div class="gameinfo">
                 <br>
@@ -161,16 +167,21 @@
                 <br>
             </div>
 
+            <!-- Game Output -->
+
             <div class="btnsCnt shadow-lg p-10 mb-lg-5 bg-body-tertiary">
                 <h3 class="btnText text-bg-light text-center">You Guess seems to be!</h3>
                 <div class="buttonContainer" id="buttonContainer">
-                    <button class="btn btn-dark">Play</button>
-                    <button class="btn btn-dark">Play</button>
-                    <button class="btn btn-dark">Play</button>
+                    <button class="btn btn-dark">Start</button>
+                    <button class="btn btn-dark">Start</button>
+                    <button class="btn btn-dark">Start</button>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Audios Section -->
     <audio id="winAudio" class="hidden" src="./Audios/you_win.mp3" preload="auto"></audio>
 
     <audio id="lostAudio" class="hidden" src="./Audios/you_lost.mp3" preload="auto"></audio>
