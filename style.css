@@ -210,6 +210,16 @@
     .form-check {
         text-align: left;
         width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-check-input {
+        transform: scale(0.8);
+    }
+
+    .form-check-label {
+        font-size: 15px;
     }
 
     .desc {
@@ -218,13 +228,21 @@
         padding: 15px;
     }
 
+    #inputArea {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
     #inputArea input,
     #inputArea button {
-        font-size: 12px;
+        width: 100%;
+        font-size: 20px;
+        border-radius: 20px;
     }
 
     #inputArea button {
-        text-align: center;
+        margin-top: 5px;
     }
 
 
