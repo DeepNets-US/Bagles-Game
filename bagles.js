@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const difficultyRadioButtons = document.querySelectorAll('input[type="radio"]');
+
     const numberInput = document.getElementById("numberInput");
     const submitBtn = document.getElementById("submitBtn");
     const resultDisplay = document.querySelector(".result");
@@ -30,24 +30,47 @@ document.addEventListener("DOMContentLoaded", function () {
     let n_tries = difficultySettings.easy.n_tries;
     let randNum = generateRandomNumber(N).toString();
     let tries = 0;
+    const diffSelectInputs = document.querySelectorAll('.diffSelectInput');
+    const mobileDropdown = document.getElementById('inputGroupSelect');
 
-    difficultyRadioButtons.forEach(function (radio) {
-        radio.addEventListener("change", function () {
-            if (this.checked) {
-                const difficulty = this.value;
-                click.play();
-                N = difficultySettings[difficulty].N;
-                n_tries = difficultySettings[difficulty].n_tries;
-                randNum = generateRandomNumber(N).toString();
-                tries = 0;
-                triesLeft.textContent = n_tries;
-                numberLen.textContent = N;
-                prevIn.textContent = "";
-                updateResult("default");
-                submitBtn.disabled = false;
-            }
-        });
+    diffSelectInputs.forEach(function (input) {
+        input.addEventListener("click", handleDifficultyChange);
     });
+
+    mobileDropdown.addEventListener("change", handleDifficultyChange);
+
+    function handleDifficultyChange() {
+        const difficulty = getSelectedDifficulty();
+        console.log(difficulty);
+
+        if (difficulty) {
+            N = difficultySettings[difficulty].N;
+            n_tries = difficultySettings[difficulty].n_tries;
+            randNum = generateRandomNumber(N).toString();
+            tries = 0;
+            triesLeft.textContent = n_tries;
+            numberLen.textContent = N;
+            prevIn.textContent = "";
+            updateResult("default");
+            click.play();
+        }
+    }
+
+    function getSelectedDifficulty() {
+        const mobileDropdown = document.getElementById("inputGroupSelect");
+        const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]:checked');
+
+        if (mobileDropdown) {
+            return mobileDropdown.options[mobileDropdown.selectedIndex].value;
+        } else if (radioButtons.length > 0) {
+            return radioButtons[0].value;
+        }
+
+        // Default to "easy" if no valid option is found
+        return "easy";
+    }
+
+
 
     function updateResult(result) {
         if (result === "default") {
