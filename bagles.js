@@ -11,9 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const enterAudio = document.getElementById("enterAudio");
     const click = document.getElementById("click");
     const diffSelectInputs = document.querySelectorAll('.diffSelectInput');
-    const audioPlay = document.querySelector('.mobileDropdown');
     const mobileDropdown = document.getElementById("inputGroupSelect");
     const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]:checked');
+    const arenaElement = document.querySelector('.arena');
+    const audioPlay = document.querySelector('.mobileDropdown');
+
+    let checkAudioPlay = window.getComputedStyle(audioPlay).display;
+    if (checkAudioPlay !== "none"){
+        arenaElement.classList.remove("shadow-lg");
+        arenaElement.classList.remove("bg-body-tertiary");
+    }
+
 
     diffSelectInputs.forEach(function (input) {
         input.addEventListener("click", handleDifficultyChange);
@@ -35,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bagels": "danger"
     };
 
+    const stateMapping = {
+        "Pico": "P",
+        "Fermi": "F",
+        "Bagels": "B"
+    };
+
     let N = difficultySettings.easy.N;
     let n_tries = difficultySettings.easy.n_tries;
     let randNum = generateRandomNumber(N).toString();
@@ -53,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
             prevIn.textContent = "";
             updateResult("default");
 
-            let checkAudioPlay = window.getComputedStyle(audioPlay).display;
             if (checkAudioPlay === "none") {
                 click.play();
             }
@@ -99,7 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonContainer.innerHTML = "";
             result.split(" ").forEach(state => {
                 const button = document.createElement("button");
-                button.textContent = state;
+
+                if (checkAudioPlay === "none") {
+                    button.textContent = state;
+                } else {
+                    console.log(state);
+                    button.textContent = stateMapping[state];
+                }
+
                 button.className = "btn btn-lg btn-" + colors[state];
                 buttonContainer.appendChild(button);
             });
