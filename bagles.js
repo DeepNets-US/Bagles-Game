@@ -56,8 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleDifficultyChange() {
         const difficulty = getSelectedDifficulty();
-        console.log(difficulty);
-
+        
         if (difficulty) {
             N = difficultySettings[difficulty].N;
             n_tries = difficultySettings[difficulty].n_tries;
