@@ -121,10 +121,18 @@
     display: none;
 }
 
+.mobileDropdown {
+    display: none;
+}
+
 
 /* Responsive Site */
 
 @media (max-width: 1024px) {
+
+    .mobileDropdown {
+        display: none;
+    }
 
     .diffSelect div,
     .diffSelect h3 {
@@ -153,6 +161,27 @@
 }
 
 @media (max-width: 800px) {
+
+    .mobileDropdown {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .input-group-prepend,
+    .custom-select {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .custom-select {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .input-group-text {
+        font-size: 50px;
+    }
 
     .desc {
         padding: 20px;
@@ -200,26 +229,12 @@
 
 @media (max-width: 500px) {
 
-    .diffSelOpts {
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
+    .mobileDropdown {
+        display: block;
     }
 
-    .form-check {
-        text-align: left;
-        width: 50%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .form-check-input {
-        transform: scale(0.8);
-    }
-
-    .form-check-label {
-        font-size: 15px;
+    .diffSelect {
+        display: none;
     }
 
     .desc {
