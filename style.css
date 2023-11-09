@@ -123,13 +123,50 @@
 
 /* Responsive Site */
 
-/* Create a media query for tablet screens (768px - 1024px) */
 @media (max-width: 1024px) {
 
     .diffSelect div,
     .diffSelect h3 {
         font-size: 18px;
         margin-left: 10px;
+    }
+
+    #inputArea input,
+    #inputArea button {
+        font-size: 18px;
+    }
+
+    .gameinfo {
+        font-size: 18px;
+    }
+
+    .btnText {
+        font-size: 20px;
+    }
+
+    .buttonContainer button {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .diffSelect {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        font-style: 5px;
+    }
+
+    .form-check {
+        width: 20%;
+    }
+
+    .diffSelect h3 {
+        font-size: 25px;
     }
 
     #inputArea input,
