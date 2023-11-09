@@ -162,27 +162,6 @@
 
 @media (max-width: 800px) {
 
-    .mobileDropdown {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .input-group-prepend,
-    .custom-select {
-        margin: 5px;
-        width: 100%;
-    }
-
-    .custom-select {
-        padding: 5px;
-        text-align: center;
-    }
-
-    .input-group-text {
-        font-size: 50px;
-    }
-
     .desc {
         padding: 20px;
     }
@@ -228,6 +207,34 @@
 }
 
 @media (max-width: 500px) {
+
+    .desc {
+        padding: 20px;
+    }
+
+    .mobileDropdown {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .input-group-prepend,
+    .custom-select {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .custom-select {
+        padding: 10px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .input-group-text {
+        font-size: 50px;
+    }
+
 
     .mobileDropdown {
         display: block;

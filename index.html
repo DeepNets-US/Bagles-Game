@@ -115,17 +115,13 @@
             <!-- Dropdown for Mobile Devices -->
 
             <div class="mobileDropdown">
-
-                <div class="input-group">
-                    <select class="custom-select bg-success text-white rounded-4" id="inputGroupSelect">
-                        <option selected>Easy</option>
-                        <option value="kid">Kid</option>
-                        <option value="easy">Easy</option>
-                        <option value="normal">Normal</option>
-                        <option value="hard">Hard</option>
-                        <option value="impossible">Impossible</option>
-                    </select>
-                </div>
+                <select class="diffSelectInput custom-select bg-success text-white rounded-4" id="inputGroupSelect">
+                    <option value="kid">Kid</option>
+                    <option value="easy" selected>Easy</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Hard</option>
+                    <option value="impossible">Impossible</option>
+                </select>
 
             </div>
 
@@ -136,38 +132,42 @@
 
                 <!-- Radio Buttons for big devices -->
                 <div class="diffSelOpts">
+
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="kid" value="kid">
+                        <input class="diffSelectInput form-check-input" type="radio" name="flexRadioDefault" id="kid"
+                            value="kid">
                         <label class="form-check-label" for="kid">
                             <strong class="text-success">Kid</strong>
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="easy" value="easy"
-                            checked>
+                        <input class="diffSelectInput form-check-input" type="radio" name="flexRadioDefault" id="easy"
+                            value="easy" checked>
                         <label class="form-check-label" for="easy">
                             <strong class="text-primary">Easy</strong>
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Normal" value="normal">
+                        <input class="diffSelectInput form-check-input" type="radio" name="flexRadioDefault" id="Normal"
+                            value="normal">
                         <label class="form-check-label" for="Normal">
                             <strong class="text-warning">Normal</strong>
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="hard" value="hard">
+                        <input class="diffSelectInput form-check-input" type="radio" name="flexRadioDefault" id="hard"
+                            value="hard">
                         <label class="form-check-label" for="hard">
                             <strong class="text-danger-emphasis">Hard</strong>
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="impossible"
-                            value="impossible">
+                        <input class="diffSelectInput form-check-input" type="radio" name="flexRadioDefault"
+                            id="impossible" value="impossible">
                         <label class="form-check-label" for="impossible">
                             <strong class="text-danger">Impossible</strong>
                         </label>

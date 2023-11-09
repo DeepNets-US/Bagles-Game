@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const numberInput = document.getElementById("numberInput");
     const submitBtn = document.getElementById("submitBtn");
-    const resultDisplay = document.querySelector(".result");
     const triesLeft = document.querySelector(".ntry");
     const numberLen = document.querySelector(".len");
     const prevIn = document.querySelector(".prevIn");
@@ -11,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const lostAudio = document.getElementById("lostAudio");
     const enterAudio = document.getElementById("enterAudio");
     const click = document.getElementById("click");
+    const diffSelectInputs = document.querySelectorAll('.diffSelectInput');
+    const audioPlay = document.querySelector('.mobileDropdown');
+    const mobileDropdown = document.getElementById("inputGroupSelect");
+    const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]:checked');
+
+    diffSelectInputs.forEach(function (input) {
+        input.addEventListener("click", handleDifficultyChange);
+    });
+
+    mobileDropdown.addEventListener("change", handleDifficultyChange);
 
     const difficultySettings = {
         kid: { N: 2, n_tries: 20 },
@@ -30,18 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let n_tries = difficultySettings.easy.n_tries;
     let randNum = generateRandomNumber(N).toString();
     let tries = 0;
-    const diffSelectInputs = document.querySelectorAll('.diffSelectInput');
-    const mobileDropdown = document.getElementById('inputGroupSelect');
-
-    diffSelectInputs.forEach(function (input) {
-        input.addEventListener("click", handleDifficultyChange);
-    });
-
-    mobileDropdown.addEventListener("change", handleDifficultyChange);
 
     function handleDifficultyChange() {
         const difficulty = getSelectedDifficulty();
-        console.log(difficulty);
 
         if (difficulty) {
             N = difficultySettings[difficulty].N;
@@ -52,21 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
             numberLen.textContent = N;
             prevIn.textContent = "";
             updateResult("default");
-            click.play();
+
+            let checkAudioPlay = window.getComputedStyle(audioPlay).display;
+            if (checkAudioPlay === "none") {
+                click.play();
+            }
+
+
         }
     }
 
     function getSelectedDifficulty() {
-        const mobileDropdown = document.getElementById("inputGroupSelect");
-        const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]:checked');
-
         if (mobileDropdown) {
             return mobileDropdown.options[mobileDropdown.selectedIndex].value;
         } else if (radioButtons.length > 0) {
             return radioButtons[0].value;
         }
 
-        // Default to "easy" if no valid option is found
         return "easy";
     }
 
