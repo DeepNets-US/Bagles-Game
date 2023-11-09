@@ -179,11 +179,11 @@
 
     #inputArea input,
     #inputArea button {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .gameinfo {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .btnText {
@@ -191,8 +191,9 @@
     }
 
     .buttonContainer button {
-        font-size: 10px;
-        padding: 2px;
+        font-size: 20px;
+        padding: 5px;
+        width: 70px;
     }
 
 }
