@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const click = document.getElementById("click");
     const diffSelectInputs = document.querySelectorAll('.diffSelectInput');
     const mobileDropdown = document.getElementById("inputGroupSelect");
-    const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]:checked');
+    const radioButtons = document.querySelectorAll('.diffSelectInput[type="radio"]');
     const arenaElement = document.querySelector('.arena');
     const audioPlay = document.querySelector('.mobileDropdown');
 
     let checkAudioPlay = window.getComputedStyle(audioPlay).display;
-    if (checkAudioPlay !== "none"){
+    if (checkAudioPlay !== "none") {
         arenaElement.classList.remove("shadow-lg");
         arenaElement.classList.remove("bg-body-tertiary");
     }
@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleDifficultyChange() {
         const difficulty = getSelectedDifficulty();
+        console.log(difficulty);
 
         if (difficulty) {
             N = difficultySettings[difficulty].N;
@@ -76,13 +77,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function getSelectedDifficulty() {
-        if (mobileDropdown) {
-            return mobileDropdown.options[mobileDropdown.selectedIndex].value;
-        } else if (radioButtons.length > 0) {
-            return radioButtons[0].value;
+        let selectedValue;
+        if (checkAudioPlay !== "none") {
+            Array.from(mobileDropdown.options).forEach(option => {
+                if (option.selected) {
+                    selectedValue = option.value;
+                }
+            });
+        } else {
+            radioButtons.forEach(radioButton => {
+                if (radioButton.checked) {
+                    selectedValue = radioButton.value;
+                }
+            });
         }
-
-        return "easy";
+        return selectedValue;
     }
 
 
