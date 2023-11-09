@@ -160,7 +160,7 @@
 
     .diffSelect {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: column;
         text-align: center;
         justify-content: center;
         flex-direction: column;
@@ -200,13 +200,32 @@
 
 @media (max-width: 500px) {
 
-    .diffSelect div,
-    .diffSelect h3 {
-        font-size: 18px;
-        margin-left: 10px;
+    .diffSelOpts {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form-check {
+        text-align: left;
+        width: 50%;
     }
 
     .desc {
-        padding: 10px;
+        margin-top: 100px;
+        text-align: justify;
+        padding: 15px;
     }
+
+    #inputArea input,
+    #inputArea button {
+        font-size: 12px;
+    }
+
+    #inputArea button {
+        text-align: center;
+    }
+
+
 }
