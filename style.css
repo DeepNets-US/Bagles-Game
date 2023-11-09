@@ -29,6 +29,10 @@
     border-radius: 50px;
 }
 
+.diffText {
+    display: inline-block;
+}
+
 .diffSelect {
     margin: 10px;
 }
@@ -119,11 +123,38 @@
 
 /* Responsive Site */
 
-@media (max-width: 1000px) {}
+/* Create a media query for tablet screens (768px - 1024px) */
+@media (max-width: 1024px) {
+
+    .diffSelect div,
+    .diffSelect h3 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    #inputArea input,
+    #inputArea button {
+        font-size: 18px;
+    }
+
+    .gameinfo {
+        font-size: 18px;
+    }
+
+    .btnText {
+        font-size: 25px;
+    }
+
+}
 
 @media (max-width: 500px) {
 
-    /* Low padding for mobile screens */
+    .diffSelect div,
+    .diffSelect h3 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
     .desc {
         padding: 10px;
     }
