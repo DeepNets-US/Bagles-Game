@@ -108,44 +108,52 @@
         <!-- Game Section -->
 
         <div class="arena shadow-lg p-10 mb-lg-5 bg-body-tertiary">
+
+            <!-- Difficulty Selection -->
+
             <div class="diffSelect">
                 <h3 class="diffText">Select difficulty :</h3>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="kid" value="kid">
-                    <label class="form-check-label" for="kid">
-                        <strong class="text-success">Kid</strong>
-                    </label>
+                <div class="diffSelOpts">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="kid" value="kid">
+                        <label class="form-check-label" for="kid">
+                            <strong class="text-success">Kid</strong>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="easy" value="easy"
+                            checked>
+                        <label class="form-check-label" for="easy">
+                            <strong class="text-primary">Easy</strong>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Normal" value="normal">
+                        <label class="form-check-label" for="Normal">
+                            <strong class="text-warning">Normal</strong>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="hard" value="hard">
+                        <label class="form-check-label" for="hard">
+                            <strong class="text-danger-emphasis">Hard</strong>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="impossible"
+                            value="impossible">
+                        <label class="form-check-label" for="impossible">
+                            <strong class="text-danger">Impossible</strong>
+                        </label>
+                    </div>
+
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="easy" value="easy" checked>
-                    <label class="form-check-label" for="easy">
-                        <strong class="text-primary">Easy</strong>
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Normal" value="normal">
-                    <label class="form-check-label" for="Normal">
-                        <strong class="text-warning">Normal</strong>
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="hard" value="hard">
-                    <label class="form-check-label" for="hard">
-                        <strong class="text-danger-emphasis">Hard</strong>
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="impossible"
-                        value="impossible">
-                    <label class="form-check-label" for="impossible">
-                        <strong class="text-danger">Impossible</strong>
-                    </label>
-                </div>
             </div>
 
             <!-- User Input -->
@@ -169,9 +177,9 @@
 
             <!-- Game Output -->
 
-            <div class="btnsCnt shadow-lg p-10 mb-lg-5 bg-body-tertiary">
+            <div class="btnsCnt shadow-lg p-10 mb-lg-5 bg-body-tertiary rounded-5">
                 <h3 class="btnText text-center">You Guess seems to be!</h3>
-                
+
                 <div class="buttonContainer" id="buttonContainer">
                     <button class="btn btn-dark btnCntText">Start</button>
                     <button class="btn btn-dark btnCntText">Start</button>
